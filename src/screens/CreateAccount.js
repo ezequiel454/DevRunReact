@@ -47,9 +47,13 @@ class CreateAccount extends Component{
         }
     }
     render(){
-      if(this.props.auth.isAuth){
-        return<Redirect to='/restrito' />
-      }
+        if(this.props.auth.isAuth){
+            if(this.props.auth.user.role === 'admin'){
+                return <Redirect to='/admin' /> 
+            }else{
+                return <Redirect to='/restrito' />
+            }
+        }
       return (
           <div>
               <h1>Create Account</h1>
