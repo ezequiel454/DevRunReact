@@ -49,13 +49,13 @@ class Login extends Component {
             <input type='text' value={this.state.form.email} onChange={this.handleChange('email')} />
           </Form.Field>
           <Form.Field>
-            <label>Senha</label>
+            <label>Password</label>
             <input type='password' value={this.state.form.passwd} onChange={this.handleChange('passwd')} /> 
           </Form.Field>
-          <Button onClick={this.login}>Logar</Button>
+          <Button onClick={this.login}>Loggin</Button>
           {
             this.props.auth.error && 
-              <p>Erro ao logar</p>
+              <p>Login Failed</p>
           }
         </Form>
       </div>

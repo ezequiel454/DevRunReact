@@ -14,9 +14,9 @@ const Header = props => {
       <Menu.Menu position='right'>
         <Dropdown item text={props.auth.user.name}>
           <Dropdown.Menu>
-            { props.auth.user.role === 'admin' && <Dropdown.Item as={Link} to='/admin/home'>Mode: admin</Dropdown.Item> }
-            <Dropdown.Item as={Link} to='/restrito/my-account'>Minha conta</Dropdown.Item>
-            <Dropdown.Item as={Link} to='/restrito/change-pass'>Alterar senha</Dropdown.Item>
+            { props.auth.user.role === 'admin' && <Dropdown.Item as={Link} to='/admin/home'>Admin</Dropdown.Item> }
+            <Dropdown.Item as={Link} to='/restrito/my-account'>My Account</Dropdown.Item>
+            <Dropdown.Item as={Link} to='/restrito/change-pass'>Change Password</Dropdown.Item>
             <Dropdown.Item onClick={props.logout}>Sair</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

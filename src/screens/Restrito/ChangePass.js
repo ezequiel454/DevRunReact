@@ -48,7 +48,7 @@ class ChangePass extends Component{
                     this.state.error === 'length' && <Segment color='red'>The password must have more then 6 characters</Segment >
                 }
                 {
-                    this.props.auth.saved && <Segment color='green'>Password alterada com sucesso!</Segment >
+                    this.props.auth.saved && <Segment color='green'>Password changed with success!</Segment >
                 }
                 {   !this.props.auth.saved && 
                     <Form>

@@ -10,15 +10,15 @@ const Header = props => {
     <Menu>
       <Menu.Item as={Link} to='/'><Image src={'/logo.png'} size='small'/></Menu.Item>
       <Menu.Item as={Link} to='/admin'>Home</Menu.Item>
-      <Menu.Item as={Link} to='/admin/users'>Usuários</Menu.Item>
+      <Menu.Item as={Link} to='/admin/users'>Users</Menu.Item>
       <Menu.Item as={Link} to='/admin/runs'>Runs</Menu.Item>
       <Menu.Menu position='right'>
         <Dropdown item text={props.auth.user.name}>
           <Dropdown.Menu>
-            { props.auth.user.role === 'admin' && <Dropdown.Item as={Link} to='/restrito'>Mode: User</Dropdown.Item> }
+            { props.auth.user.role === 'admin' && <Dropdown.Item as={Link} to='/restrito'>Restricted</Dropdown.Item> }
             <Dropdown.Item as={Link} to='/restrito/my-account'>My Account</Dropdown.Item>
             <Dropdown.Item as={Link} to='/restrito/change-pass'>Change Password</Dropdown.Item>
-            <Dropdown.Item onClick={props.logout}>Sair</Dropdown.Item>
+            <Dropdown.Item onClick={props.logout}>Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Menu.Menu>
