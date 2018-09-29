@@ -35,12 +35,12 @@ class MyAccount extends Component{
             <div>
                 <h1>My Account</h1>
                 {
-                    this.props.auth.saved && <Segment color='green'>Configurações alteradas com sucesso!</Segment >
+                    this.props.auth.saved && <Segment color='green'>Changed with success!</Segment >
                 }
                 {   !this.props.auth.saved && 
                     <Form>
                         <select value={this.state.unit} onChange={this.handleChange('unit')}>
-                            <option value='metric'>Métrico (km)</option>
+                            <option value='metric'>Metric (km)</option>
                             <option value='imperial'>Imperial (mi)</option>
                         </select>
                         <select value={this.state.timezone} onChange={this.handleChange('timezone')}>
@@ -52,7 +52,7 @@ class MyAccount extends Component{
                                     })
                             }
                         </select>
-                        <Button onClick={this.handleSave}>Salvar</Button>
+                        <Button onClick={this.handleSave}>Save</Button>
                     </Form>
                 }
                 
