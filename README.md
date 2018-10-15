@@ -13,6 +13,16 @@ Web Project made for Runners.
 - [Data Flow](#data-flow)
 
 ## Technology
+:construction:
+
+## Developing
+:construction:
 
 ## API 
 https://github.com/tuliofaria/devreactjs-bootcamp-runs-server
+
+## Testing
+:construction:
+
+## Data Flow
+:construction:
