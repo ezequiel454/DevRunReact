@@ -61,9 +61,9 @@ export const authFailure = (state = INITIAL_STATE, action) => {
   return {
     ...state,
     isSigningin: false,
-    isAuth: false,
-    //error: true,
-    //errorMessage: action.error
+    isAuth: false
+    // error: true,
+    // errorMessage: action.error
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment-timezone' 
+import moment from 'moment-timezone'
 
 const DateStr = ({ date, timezone }) => {
   const d = moment.tz(date, 'GMT')

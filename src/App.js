@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import store from './redux'
 import { Provider } from 'react-redux'
 import {
@@ -12,25 +12,22 @@ import Home from './screens/Home'
 import Admin from './screens/Admin'
 import Restrito from './screens/Restrito'
 import Login from './screens/Login'
-import CreateAccount from './screens/CreateAccount';
+import CreateAccount from './screens/CreateAccount'
 
-class App extends Component {
-  render () {
-    return (
-      <Provider store={store}>
-        <Router>
-          <Container>
-            <Route exact path='/' component={Home} />
-            <Route path='/admin' component={Admin} />
-            <Route path='/restrito' component={Restrito} />
-            <Route path='/login' component={Login} />
-            <Route path='/create-account' component={CreateAccount} />
-
-          </Container>
-        </Router>
-      </Provider>
-    )
-  }
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Router>
+        <Container>
+          <Route exact path='/' component={Home} />
+          <Route path='/admin' component={Admin} />
+          <Route path='/restrito' component={Restrito} />
+          <Route path='/login' component={Login} />
+          <Route path='/create-account' component={CreateAccount} />
+        </Container>
+      </Router>
+    </Provider>
+  )
 }
 
 export default App

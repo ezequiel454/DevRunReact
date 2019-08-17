@@ -5,8 +5,7 @@ export const INITIAL_STATE = {
   isLoading: false,
   data: [],
   saved: false,
-  isSaving: false,
-  user: {}
+  isSaving: false
 }
 
 export const getUsersRequest = (state = INITIAL_STATE) => {
@@ -41,8 +40,7 @@ export const getUserRequest = (state = INITIAL_STATE) => {
 export const getUserSuccess = (state = INITIAL_STATE, action) => {
   return {
     ...state,
-    isLoading: false,
-    user: action.user
+    isLoading: false
   }
 }
 
@@ -63,8 +61,8 @@ export const removeUserRequest = (state = INITIAL_STATE) => {
 export const removeUserSuccess = (state = INITIAL_STATE, action) => {
   const user = [...state.data]
   const id = action.id
-  const indexToDelete = user.findIndex( user => user.id === id )
-  user.splice(indexToDelete,1)
+  const indexToDelete = user.findIndex(user => user.id === id)
+  user.splice(indexToDelete, 1)
   return {
     ...state,
     isSaving: false,
@@ -90,16 +88,15 @@ export const updateUserRequest = (state = INITIAL_STATE) => {
 }
 
 export const updateUserSuccess = (state = INITIAL_STATE, action) => {
-  const newUser = {
-    ...state.user
-  }
-  Object.keys(action.user).forEach(key => {
-    newUser[key] = action.user[key]
-  })
+  // const newUser = {
+  //   ...state.user
+  // }
+  // Object.keys(action.user).forEach(key => {
+  //   newUser[key] = action.user[key]
+  // })
   return {
     ...state,
     isSaving: false,
-    user: newUser,
     saved: true
   }
 }
@@ -138,7 +135,7 @@ export const HANDLERS = {
   [Types.UPDATE_USER_REQUEST]: updateUserRequest,
   [Types.UPDATE_USER_SUCCESS]: updateUserSuccess,
   [Types.UPDATE_USER_FAILURE]: updateUserFailure,
-  [Types.UPDATE_USER_RESET]: updateUserReset,
+  [Types.UPDATE_USER_RESET]: updateUserReset
 }
 
 export default createReducer(INITIAL_STATE, HANDLERS)

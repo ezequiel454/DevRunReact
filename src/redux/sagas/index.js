@@ -1,6 +1,5 @@
 import { takeLatest, all, put } from 'redux-saga/effects'
-import ActionCreators from '../actionCreators'
-import { Types } from '../actionCreators'
+import ActionCreators, { Types } from '../actionCreators'
 
 import { getRuns, createRun, removeRun } from './runs'
 import { auth, login, destroyAuth, updateProfile, createProfile } from './auth'
@@ -8,11 +7,7 @@ import { getUsers, removeUser, getUser, updateUser } from './users'
 import Api from '../../service/Api'
 
 export default function * rootSaga () {
-  
-  const devURL = 'http://localhost:3001'
-  const prodURL = 'http://api.x.com'
-  const baseURL = process.env.NODE_ENV === 'development' ? devURL : prodURL
-  const api = new Api(baseURL)
+  const api = new Api()
 
   yield all([
     takeLatest(Types.SIGNIN_REQUEST, login({ api })),
