@@ -26,3 +26,8 @@ https://github.com/tuliofaria/devreactjs-bootcamp-runs-server
 
 ## Data Flow
 :construction:
+
+## Update package
+npm install -g npm-check-updates
+ncu -u
+npm update
