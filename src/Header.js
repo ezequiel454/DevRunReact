@@ -8,6 +8,7 @@ const Header = () => {
   const auth = useSelector(state => state.auth)
 
   if (auth.isAuth) {
+    console.log('aqui')
     if (auth.user.role === 'admin') {
       return <Redirect to='/admin' />
     } else {

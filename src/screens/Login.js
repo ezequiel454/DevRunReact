@@ -16,11 +16,12 @@ const Login = () => {
   const auth = useSelector(state => state.auth)
   const dispatch = useDispatch()
 
-  const login = (email, passwd) => {
-    dispatch(ActionCreators.signinRequest(email, passwd))
-  }
   const [email, setEmail] = useState('')
   const [passwd, setPassws] = useState('')
+
+  const login = () => {
+    dispatch(ActionCreators.signinRequest(email, passwd))
+  }
 
   if (auth.isAuth) {
     if (auth.user.role === 'admin') {
@@ -33,6 +34,7 @@ const Login = () => {
     <div >
       <Header />
       <h1>Login</h1>
+      { email }
       <Form>
         <Form.Field>
           <label>E-mail</label>

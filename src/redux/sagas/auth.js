@@ -1,11 +1,11 @@
 import jwtDecode from 'jwt-decode'
 
-import { put, call } from 'redux-saga/effects'
+import { put } from 'redux-saga/effects'
 import ActionCreators from '../actionCreators'
 
 export const login = ({ api }) => function * (action) {
   let token = ''
-  const login = yield call(api.login, {
+  const login = yield api.login({
     email: action.email,
     passwd: action.passwd
   })

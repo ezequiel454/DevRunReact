@@ -21,10 +21,15 @@
     "reduxsauce": "^1.1.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.3",
-    "standard": "^13.1.0"
+    "standard": "^13.1.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert-react": "^0.4.11"
   },
   "standard": {
-    "globals": [ "localStorage" ]
+    "globals": [
+      "localStorage",
+      "it"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
